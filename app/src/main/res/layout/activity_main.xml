@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.politecnicomalaga.hotelapp.vista.MainActivity">
+
+    <TextView
+        android:id="@+id/texto0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Industria 4.0"
+        android:textAlignment="center"
+        android:textSize="40.0sp"
+        app:layout_constraintBottom_toTopOf="@id/texto1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/texto1"
+        android:textSize="20.0sp"
+        android:textAlignment="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Temperatura"
+        app:layout_constraintBottom_toTopOf="@+id/texto2"
+        app:layout_constraintEnd_toStartOf="@id/setTemp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/texto0" />
+
+    <TextView
+        android:id="@+id/texto2"
+        android:textSize="20.0sp"
+        android:layout_width="0dp"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:text="Amperaje"
+        app:layout_constraintBottom_toTopOf="@+id/texto3"
+        app:layout_constraintEnd_toStartOf="@id/setAmp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texto1" />
+
+    <TextView
+        android:id="@+id/texto3"
+        android:textSize="20.0sp"
+        android:layout_width="0dp"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:text="LED"
+        app:layout_constraintBottom_toTopOf="@+id/texto4"
+        app:layout_constraintEnd_toStartOf="@id/textoLed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texto2" />
+
+    <TextView
+        android:id="@+id/texto4"
+        android:textSize="20.0sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ESTADO"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/botonArrancar"
+        app:layout_constraintEnd_toStartOf="@id/textoEstado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texto3" />
+
+    <EditText
+        android:id="@+id/setTemp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text=""
+        android:hint="Ingrese la Temperatura"
+        app:layout_constraintBottom_toTopOf="@+id/texto2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/texto1"
+        app:layout_constraintTop_toBottomOf="@id/texto0"/>
+
+    <EditText
+        android:id="@+id/setAmp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text=""
+        android:hint="Ingrese el Amperaje"
+        app:layout_constraintBottom_toTopOf="@+id/texto3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/texto2"
+        app:layout_constraintTop_toBottomOf="@+id/texto1"/>
+
+    <TextView
+        android:id="@+id/textoLed"
+        android:textSize="20.0sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="OFF"
+        android:background="@color/black"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/texto4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/texto3"
+        app:layout_constraintTop_toBottomOf="@+id/texto2" />
+
+    <TextView
+        android:id="@+id/textoEstado"
+        android:textSize="20.0sp"
+        android:layout_width="0dp"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:text="OFF"
+        android:background="#FF0000"
+        app:layout_constraintBottom_toTopOf="@+id/botonArrancar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/texto4"
+        app:layout_constraintTop_toBottomOf="@+id/texto3" />
+
+    <Button
+        android:id="@+id/botonArrancar"
+        android:textSize="25.0sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Arrancar"
+        app:layout_constraintBottom_toTopOf="@id/botonComprobar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texto4" />
+
+    <Button
+        android:id="@+id/botonComprobar"
+        android:textSize="25.0sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comprobar"
+        app:layout_constraintBottom_toTopOf="@id/botonApagar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonArrancar" />
+
+    <Button
+        android:id="@+id/botonApagar"
+        android:textSize="25.0sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apagar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonComprobar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
